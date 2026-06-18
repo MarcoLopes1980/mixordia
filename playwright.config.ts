@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'file://' + __dirname,
+    baseURL: 'http://www.mixordia.pt',
     trace: 'on-first-retry',
   },
 
