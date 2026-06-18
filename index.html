@@ -3,78 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We'll Be Right Back</title>
+    <title>Alienarium</title>
     <style>
-        * {
-            box-sizing: border-box;
+        /* Modern, minimal styling to center the image */
+        body {
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #f0f2f5;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
+            min-height: 100vh;
+            font-family: system-ui, sans-serif;
         }
-
-        .container {
-            max-width: 600px;
-            background: white;
-            padding: 40px;
+        .image-container {
+            max-width: 80%;
+            max-height: 90vh;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            background: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .contact-card {
+            min-width: 220px;
+            max-width: 300px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .contact-card h3 {
+            margin: 0 0 6px 0;
+            font-size: 16px;
+        }
+        .contact-card a {
+            color: #0a66c2;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 0 auto;
         }
 
-        .icon {
-            font-size: 50px;
-            color: #ff9800;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .gear {
-            display: inline-block;
-            animation: spin 4s linear infinite;
-        }
-
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-
-        .footer {
-            font-size: 0.9rem;
-            color: #999;
+        @media (max-width: 700px) {
+            .content {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .contact-card {
+                width: 100%;
+                max-width: 480px;
+            }
+            .image-container { max-width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon"><span class="gear">⚙️</span></div>
-        <h1>Under Maintenance</h1>
-        <p>We are currently performing some scheduled updates to improve our services. We apologize for the inconvenience and expect to be back online shortly.</p>
-        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 20px;">
-        <div class="footer">
-            Thank you for your patience!
+    <div class="content">
+        <div class="image-container">
+            <img src="image.png" alt="Displayed PNG Image">
         </div>
+
+        <aside class="contact-card" aria-label="Contact">
+            <h3>Contact</h3>
+            <p>Email account:</p>
+            <p><a href="mailto:info@mixordia.pt">info@mixordia.pt</a></p>
+            <p>Phone number:</p>
+            <p><a href="tel:+351218008181">+351 21 800 8181</a></p>
+        </aside>
     </div>
 
 </body>
